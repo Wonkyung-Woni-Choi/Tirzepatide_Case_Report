@@ -3,7 +3,7 @@
 clear; close all; clc;
 set(0,'DefaultFigureVisible','off');
 set(groot,'defaultAxesFontSize',15)
-addpath('C:\Users\XX\Box\XX_XX\scripts\XX\BITES\functions');
+addpath('C:\Users\XX\XX\XX_XX\scripts\XX\XX\functions');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 patient = "XX";
@@ -62,7 +62,7 @@ end
 
 % save directory
 target = sprintf("New%s_magnet_v%s%s",patient,ver,stimannot);
-fig_dir = "C:\Users\XX\Box\XX_XX\scripts\XX\figures\Magnet\"; % figures saved in the folder named "(target)"
+fig_dir = "C:\Users\XX\XX\XX_XX\scripts\XX\figures\Magnet\"; % figures saved in the folder named "(target)"
 dir_target = fullfile(fig_dir,target);
 % sub directory
 subtarget = "static";
@@ -72,7 +72,7 @@ if ~exist(dir_target, 'dir')
 end
 
 % load data
-dir_data = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\%s\\alldata\\",patient);
+dir_data = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\%s\\alldata\\",patient);
 varname = sprintf("%s_magnet_fieldtrip_%s",patient,uptodate);
 dir_fullsesdatavar = fullfile(dir_data, varname);
 
@@ -83,7 +83,7 @@ wf_static_analysis(patient,target,dir_data,dir_target,dir_fullsesdatavar,ch,stim
 %% get idxs
 clear; clc; close all;
 set(0,'DefaultFigureVisible','on');
-addpath('C:\Users\XX\Box\XX_XX\scripts\XX\BITES\functions');
+addpath('C:\Users\XX\XX\XX_XX\scripts\XX\XX\functions');
 
 %%%%%%%%%%%%% Change here %%%%%%%%%%%%%%%%%%%%%
 patient = "XX";
@@ -176,20 +176,20 @@ end
 
 % save directory
 target = sprintf("New%s_magnet_v%s%s",patient,ver,stimannot);
-fig_dir = "C:\Users\XX\Box\XX_XX\scripts\XX\figures\Magnet\"; % figures saved in the folder named "(target)"
+fig_dir = "C:\Users\XX\XX\XX_XX\scripts\XX\figures\Magnet\"; % figures saved in the folder named "(target)"
 dir_target = fullfile(fig_dir,target);
 if ~exist(dir_target, 'dir')
   mkdir(dir_target)
 end
 
 % load analysis result
-dir_data = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\%s\\alldata\\",patient);
+dir_data = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\%s\\alldata\\",patient);
 varname_result = sprintf("%s_static_ch%d",target,ch);
 dir_result = fullfile(dir_data, varname_result);
 load(dir_result);
 
 % load data - only trial nums
-dir_data = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\%s\\alldata\\",patient);
+dir_data = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\%s\\alldata\\",patient);
 varname = sprintf("%s_magnet_fieldtrip_%s",patient,uptodate);
 dir_fullsesdatavar = fullfile(dir_data, varname);
 load(dir_fullsesdatavar,"trial_nums");
