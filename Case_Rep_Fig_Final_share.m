@@ -9,7 +9,7 @@
 clear; clc; close all;
 set(0,'DefaultFigureVisible','on');
 set(groot,'defaultAxesXTickLabelRotationMode','manual'); %set(groot,'defaultAxesXTickLabelRotationMode','remove')
-addpath('C:\Users\XX\Box\XX_XX\scripts\XX\functions');
+addpath('C:\Users\XX\XX\XX_XX\scripts\XX\functions');
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 patient = "XX";
@@ -57,7 +57,7 @@ elseif isequal(patient,"XX")
 end
 
 % load data - only trial nums
-dir_data = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\%s\\alldata\\",patient);
+dir_data = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\%s\\alldata\\",patient);
 varname = sprintf("%s_magnet_fieldtrip_%s",patient,uptodate);
 dir_fullsesdatavar = fullfile(dir_data, varname);
 load(dir_fullsesdatavar);
@@ -185,14 +185,14 @@ end
 % set directory
 % folder name
 fig_folder = "XX";
-fig_dir = "C:\Users\XX\Box\XX_XX\scripts\XX\figures"; % figures saved in the folder named "(target)"
+fig_dir = "C:\Users\XX\XX\XX_XX\scripts\XX\figures"; % figures saved in the folder named "(target)"
 dir_target = fullfile(fig_dir,fig_folder);
 if ~exist(dir_target, 'dir')
   mkdir(dir_target)
 end
 % load analysis result
 target = sprintf("New%s_magnet_v%s%s",patient,ver,stimannot);
-dir_data = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\%s\\alldata\\",patient);
+dir_data = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\%s\\alldata\\",patient);
 varname_result = sprintf("%s_static_ch%d",target,ch);
 dir_result = fullfile(dir_data, varname_result);
 load(dir_result);
@@ -433,7 +433,7 @@ if isequal(patient,"XX")
             if ~titleon
                 dim = lgnd.Position + [0.07 -0.08 0 0]; % [x y w h]
                 pstr = {sprintf("%s", dose_amount)};
-                annotation('textbox',dim,'String',pstr,'FitBoxToText','on','EdgeColor','none','FontSize',16);
+                annotation('textbox',dim,'String',pstr,'FitXXToText','on','EdgeColor','none','FontSize',16);
             end
             grid on
         end
@@ -574,7 +574,7 @@ if isequal(patient,"XX")
                         dim = [0.415 0.16 0.35 0.35];   
                     end
                     pstr = {sprintf("p-value (Control vs. severe): %.3f",perm_ctcd1),sprintf("p-value (Control vs. mild): %.3f",perm_ctcd2),sprintf("p-value (severe vs. mild): %.3f",perm_cd2cd1)};
-                    annotation('textbox',dim,'String',pstr,'FitBoxToText','on');
+                    annotation('textbox',dim,'String',pstr,'FitXXToText','on');
                 end   
             end
 
@@ -842,7 +842,7 @@ else
                 if annoton 
                     dim = [0.415 0.56 0.35 0.35]; % [x y w h]
                     pstr = {sprintf("p-value (Control vs. severe): %.4f",perm_ctcd1),sprintf("p-value (Control vs. mild): %.4f",perm_ctcd2),sprintf("p-value (severe vs. mild): %.4f",perm_cd2cd1)};
-                    annotation('textbox',dim,'String',pstr,'FitBoxToText','on');
+                    annotation('textbox',dim,'String',pstr,'FitXXToText','on');
                 end
                 if titleon
                     title_str = sprintf("%s",ptname);
@@ -892,7 +892,7 @@ end
 
 % timeline bandpower plot
 % load data - only trial nums
-dir_data = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\%s\\alldata\\",patient);
+dir_data = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\%s\\alldata\\",patient);
 varname = sprintf("%s_magnet_fieldtrip_%s",patient,uptodate);
 dir_fullsesdatavar = fullfile(dir_data, varname);
 load(dir_fullsesdatavar,"trial_nums");
@@ -937,19 +937,19 @@ showdetectionplot = 1;
 % set directory
 % folder name
 fig_folder = "Case_report_v10";
-fig_dir = "C:\Users\XX\Box\XX_XX\scripts\XX\figures"; % figures saved in the folder named "(target)"
+fig_dir = "C:\Users\XX\XX\XX_XX\scripts\XX\figures"; % figures saved in the folder named "(target)"
 dir_target = fullfile(fig_dir,fig_folder);
 if ~exist(dir_target, 'dir')
   mkdir(dir_target)
 end
 % load analysis resultarget
 target = sprintf("New%s_magnet_v%s%s",patient,ver,stimannot);
-dir_data = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\%s\\alldata\\",patient);
+dir_data = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\%s\\alldata\\",patient);
 varname_result = sprintf("%s_static_ch%d",target,ch);
 dir_result = fullfile(dir_data, varname_result);
 load(dir_result);
 % directory to get timelists/detections
-dir_excel = sprintf("C:\\Users\\XX\\Box\\XX_X\\data\\XX\\XX_XX_XX EXTERNAL #PHI\\%s_magnet_cr",patient);
+dir_excel = sprintf("C:\\Users\\XX\\XX\\XX_X\\data\\XX\\XX_XX_XX EXTERNAL #PHI\\%s_magnet_cr",patient);
 
 % get timelist
 timelist = [];
