@@ -2,7 +2,7 @@
 % magnet analysis
 clear;clc;
 
-addpath('C:\Users\XX\Box\XX_XX\scripts\XX\BITES\functions');
+addpath('C:\Users\XX\XX\XX_XX\scripts\XX\XX\functions');
 %%%%%%%%%%%%%%%%%%change here%%%%%%%%%%%%%%%%%%%
 patient = "XX";
 stim = 0; 
@@ -51,13 +51,13 @@ end
 % Create list variables and save the data
 % set directory
 if isequal(patient,"XX")
-    dir_excel = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\XX\\XX_XX_XX EXTERNAL #PHI\\%s_magnet_cr",patient);
+    dir_excel = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\XX\\XX_XX_XX XX #XX\\%s_magnet_cr",patient);
 elseif isequal(patient,"XX")
-    dir_excel = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\XX\\XX_XX_XX EXTERNAL #PHI\\Stanford_XX_XX EXTERNAL #PHI\\%s_magnet",patient);
+    dir_excel = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\XX\\XX_XX_XX XX #XX\\XX_XX_XX XX #XX\\%s_magnet",patient);
 elseif isequal(patient,"XX")
-    dir_excel = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\XX\\XX_XX_XX EXTERNAL #PHI\\Stanford_XX_XX EXTERNAL #PHI\\%s_magnet",patient);
+    dir_excel = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\XX\\XX_XX_XX XX #XX\\XX_XX_XX XX #XX\\%s_magnet",patient);
 end
-dir_data = sprintf("C:\\Users\\XX\\Box\\XX_XX\\data\\%s\\alldata",patient);
+dir_data = sprintf("C:\\Users\\XX\\XX\\XX_XX\\data\\%s\\alldata",patient);
 % conditions
 if isequal(patient,"XX")
     conditions = ["Severe","Mild","Normal"];
