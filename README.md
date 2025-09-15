@@ -1,6 +1,6 @@
 # Tirzepatide_Case_Report
 
-Tirzepatide amelioration of food preoccupation is associated with human accumbens delta-theta oscillations (Choi, Nho, et al)
+Human accumbens delta-theta oscillations emerge prior to breakthrough food preoccupation in a patient on tirzepatide (Choi, Nho, et al)
 
 Repository containing code for the data presented in the above paper.
 All analysis was done in MATLAB 2022b and utilized FieldTrip Toolbox-20221118 (https://www.fieldtriptoolbox.org/)
